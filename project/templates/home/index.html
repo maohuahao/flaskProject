@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% block style %}
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pagination.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home/index.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home/search.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home/dropdownbox.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery.pagination.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loading.css') }}"/>
+{% endblock %}
+
+{% block main %}
+    <div id="index-table">
+        <div id="home-box">
+            <div class="wrapper">
+                <div class="dropdown">
+                    <div class="dropdown__selected">
+                        <div class="dropdown__option executor">
+                            被执行次数指标
+                        </div>
+                    </div>
+                    <div class="dropdown__panel">
+                        <div class="dropdown__option executor">
+                            一年内被执行次数
+                        </div>
+                        <div class="dropdown__option executor">
+                            二年内被执行次数
+                        </div>
+                        <div class="dropdown__option executor">
+                            三年内被执行次数
+                        </div>
+                    </div>
+                </div>
+                <div><input class="scope executor-count" type="number" placeholder="下限" min="0"
+                            name="executorCountMin">-<input class="scope executor-count" placeholder="上限"
+                                                              type="number" name="executorCountMax" \></div>
+            </div>
+            <div class="wrapper">
+                <div class="dropdown">
+                    <div class="dropdown__selected">
+                        <div class="dropdown__option registraion">
+                            立案次数指标
+                        </div>
+                    </div>
+                    <div class="dropdown__panel">
+                        <div class="dropdown__option registraion">
+                            一年内立案次数
+                        </div>
+                        <div class="dropdown__option registraion">
+                            二年内立案次数
+                        </div>
+                        <div class="dropdown__option registraion">
+                            三年内立案次数
+                        </div>
+                    </div>
+                </div>
+                <div><input class="scope registraion-count" type="number" placeholder="下限" min="0"
+                            name="registraionCountMin">-<input class="scope registraion-count" placeholder="上限"
+                                                                 type="number" name="registraionCountMax"/></div>
+            </div>
+            <div class="wrapper">
+                <div class="dropdown">
+                    <div class="dropdown__selected">
+                        <div class="dropdown__option judicial">
+                            裁判次数指标
+                        </div>
+                    </div>
+                    <div class="dropdown__panel">
+                        <div class="dropdown__option judicial">
+                            一年内裁判次数
+                        </div>
+                        <div class="dropdown__option judicial">
+                            二年内裁判次数
+                        </div>
+                        <div class="dropdown__option judicial">
+                            三年内裁判次数
+                        </div>
+                    </div>
+                </div>
+                <div><input class="scope judicial-count" placeholder="下限" type="number" min="0"
+                            name="judicialCountMin">-<input class="scope judicial-count" placeholder="上限"
+                                                              type="number" name="judicialCountMax"></div>
+            </div>
+            <div class="wrapper">
+                <div class="dropdown">
+                    <div class="dropdown__selected">
+                        <div class="dropdown__option involve">
+                            涉案金额指标
+                        </div>
+                    </div>
+                    <div class="dropdown__panel">
+                        <div class="dropdown__option involve">
+                            一年内涉案金额
+                        </div>
+                        <div class="dropdown__option involve">
+                            二年内涉案金额
+                        </div>
+                        <div class="dropdown__option involve">
+                            三年内涉案金额
+                        </div>
+                    </div>
+                </div>
+                <div><input class="scope involve-amount" type="number" placeholder="下限" min="0"
+                            name="involveAmountMin">-<input class="scope involve-amount" type="number"
+                                                              placeholder="上限" name="involveAmountMax"></div>
+            </div>
+        </div>
+        <table id="resp-table" class="responstable loading">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th data-th="Driver details">公司</th>
+                <th>统一社会信用代码</th>
+                <th>公司类型</th>
+                <th>成立时间</th>
+                <th>详情</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="Pagination" class="pagination"></div>
+    </div>
+
+{% endblock %}
+
+{% block scriptFooter %}
+    <script src="{{ url_for('static', filename='js/home/index.js') }}"></script>
+{% endblock %}

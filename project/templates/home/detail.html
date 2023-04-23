@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home/detail.css') }}" />
+{% endblock %}
+
+{% block main %}
+<div id="detail-box">
+    <ul class="item">
+        <li class="col"> 企业名称</li>
+        <li class="col"> 法定代表人 </li>
+        <li class="col"> 成立日期 </li>
+        <li class="col"> 注册资本 </li>
+        <li class="col"> 企业类型 </li>
+        <li class="col"> 工商注册号 </li>
+        <li class="col"> 纳税人识别号</li>
+        <li class="col"> 营业期限 </li>
+        <li class="col"> 登记机关 </li>
+        <li class="col"> 曾用名 </li>
+        <li class="col"> 注册地址</li>
+        <li class="col"> 经营范围 </li>
+    </ul>
+    <ul class="item">
+        <li class="val">{{ locals.enterprise.firm_name|default('暂无信息') }}</li>
+        <li class="val">{{ locals.enterprise.legal_rep|default('暂无信息') }}</li>
+        <li class="val">{{ locals.enterprise.est_date|default('暂无信息') }}</li>
+        <li class="val">{{ locals.enterprise.reg_cap|default('暂无信息') }}</li>
+        <li class="val">{{ locals.enterprise.firm_type|default('暂无信息') }}</li>
+        <li class="val">{{ locals.enterprise.reg_no|default('暂无信息') }}</li>
+        <li class="val">{{ locals.enterprise.tax_no|default('暂无信息') }}</li>
+        <li class="val">{{ locals.enterprise.ope_period|default('暂无信息') }}</li>
+        <li class="val">{{ locals.enterprise.reg_agency|default('暂无信息') }}</li>
+        <li class="val">{{ locals.enterprise.firm_name_used|default('暂无信息') }}</li>
+        <li class="val">{{ locals.enterprise.ope_address|default('暂无信息') }}</li>
+        <li class="val">{{ locals.enterprise.ope_scope|default('暂无信息') }}</li>
+    </ul>
+    <ul class="item">
+        <li class="col"> 统一社会信用代码</li>
+        <li class="col"> 经营状态 </li>
+        <li class="col"> 行政区划 </li>
+        <li class="col"> 实缴资本 </li>
+        <li class="col"> 所属行业 </li>
+        <li class="col"> 企业规模 </li>
+        <li class="col"> 法定代表人类型</li>
+        <li class="col"> 核准日期 </li>
+        <li class="col"> 参保人数 </li>
+        <li class="val exten"></li>
+        <li class="val exten"></li>
+        <li class="val exten"></li>
+    </ul>
+    <ul class="item">
+        <li class="val"> {{ locals.enterprise.usc_code|default('暂无信息') }}</li>
+        <li class="val"> {{ locals.enterprise.open_status|default('暂无信息') }} </li>
+        <li class="val"> {{ locals.enterprise.ope_addr_code|default('暂无信息') }} </li>
+        <li class="val"> {{ locals.enterprise.rec_cap|default('暂无信息') }} </li>
+        <li class="val"> {{ locals.enterprise.ind_econ_name|default('暂无信息') }} </li>
+        <li class="val"> {{ locals.enterprise.org_code|default('暂无信息') }} </li>
+        <li class="val"> {{ locals.enterprise.legal_rep_type|default('暂无信息') }}</li>
+        <li class="val"> {{ locals.enterprise.appr_date|default('暂无信息') }} </li>
+        <li class="val"> {{ locals.enterprise.insured_emp_num|default('暂无信息') }} </li>
+        <li class="val exten"></li>
+        <li class="val exten"></li>
+        <li class="val exten"></li>
+    </ul>
+</div>
+<div id="detail-box">
+    <ul class="item">
+        <li class="ind">一年内被执行次数：{{ locals.enterprise.first_year_executor_count }}</li>
+        <li class="ind">二年内被执行次数：{{ locals.enterprise.second_year_executor_count }}</li>
+        <li class="ind">三年内被执行次数：{{ locals.enterprise.third_year_executor_count }}</li>
+    </ul>
+    <ul class="item">
+        <li class="ind">一年内立案次数：{{ locals.enterprise.first_year_registraion_count }}</li>
+        <li class="ind">二年内立案次数：{{ locals.enterprise.second_year_registraion_count }}</li>
+        <li class="ind">三年内立案次数：{{ locals.enterprise.third_year_registraion_count }}</li>
+    </ul>
+    <ul class="item">
+        <li class="ind">一年内裁判次数：{{ locals.enterprise.first_year_judicial_count }}</li>
+        <li class="ind">二年内裁判次数：{{ locals.enterprise.second_year_judicial_count }}</li>
+        <li class="ind">三年内裁判次数：{{ locals.enterprise.third_year_judicial_count }}</li>
+    </ul>
+    <ul class="item">
+        <li class="ind">一年内涉案金额：{{ locals.enterprise.first_year_involve_amt }}</li>
+        <li class="ind">二年内涉案金额：{{ locals.enterprise.second_year_involve_amt }}</li>
+        <li class="ind">三年内涉案金额：{{ locals.enterprise.third_year_involve_amt }}</li>
+    </ul>
+</div>
+{% endblock %}

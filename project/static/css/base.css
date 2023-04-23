@@ -1,0 +1,15 @@
+*{
+    padding:0;
+    margin:0;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #024457;
+  background: #f2f2f2;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
