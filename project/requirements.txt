@@ -1,0 +1,48 @@
+alembic==1.10.2
+bit-array==0.1.0
+bitarray==2.7.3
+Bootstrap-Flask==2.2.0
+certifi @ file:///C:/b/abs_85o_6fm0se/croot/certifi_1671487778835/work/certifi
+charset-normalizer==3.1.0
+click @ file:///C:/ci/click_1646056762388/work
+colorama @ file:///C:/b/abs_a9ozq0l032/croot/colorama_1672387194846/work
+docopt==0.6.2
+Flask @ file:///C:/b/abs_ef16l83sif/croot/flask_1671217367534/work
+Flask-Cors==3.0.10
+flask-marshmallow==0.14.0
+Flask-Migrate==4.0.4
+flask-paginate==2022.1.8
+flask-sqlacodegen==1.1.8
+Flask-SQLAlchemy==3.0.3
+Flask-WTF==1.1.1
+future==0.18.3
+greenlet==2.0.2
+hdfs==2.7.0
+idna==3.4
+impyla==0.18.0
+inflect==6.0.2
+itsdangerous @ file:///tmp/build/80754af9/itsdangerous_1621432558163/work
+Jinja2 @ file:///C:/b/abs_7cdis66kl9/croot/jinja2_1666908141852/work
+Mako==1.2.4
+MarkupSafe @ file:///C:/ci/markupsafe_1654508036328/work
+marshmallow==3.19.0
+marshmallow-sqlalchemy==0.29.0
+mysqlclient==2.1.1
+packaging==23.0
+ply==3.11
+pure-sasl==0.6.2
+pydantic==1.10.6
+PyHive==0.6.5
+PyMySQL==1.0.2
+python-dateutil==2.8.2
+requests==2.28.2
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+SQLAlchemy==1.4.47
+thrift==0.16.0
+thrift-sasl==0.4.3
+thriftpy==0.3.9
+typing_extensions==4.5.0
+urllib3==1.26.15
+Werkzeug @ file:///C:/b/abs_8578rs2ra_/croot/werkzeug_1679489759009/work
+wincertstore==0.2
+WTForms==3.0.1
